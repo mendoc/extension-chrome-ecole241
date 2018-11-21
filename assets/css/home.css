@@ -1,0 +1,54 @@
+body {
+    height: 400px;
+    width: 300px;
+    background: #f2f1ed;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: auto;
+}
+
+/* Style concernant le loading */
+.load {
+    height: 100%;
+    text-align: center;
+}
+.load .image{
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    height: 48px;
+    width: 48px;
+    background: #f2f0ed url(../img/load.gif) no-repeat center;
+    background-size: 48px;
+    z-index: -1;
+}
+.load .texte{
+    top: 56%;
+    left: 30%;
+    position: absolute;
+}
+/* Fin du tyle concernant le loading */
+
+section {
+    display: none;
+}
+#publication .titre{
+    margin-bottom: 25px;
+    color: #e24342;
+}
+#publication .contenu{
+    font-size: larger;
+    line-height: 1.7em;
+    max-height: 400px;
+    overflow-y: auto;
+}
+table, tbody, tr{
+    display: block;
+}
+td{
+    display: inline-block;
+    width: 40%;
+    padding: 10px;
+}
+td:first-child{
+    font-weight: bold;
+}

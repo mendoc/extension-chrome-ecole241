@@ -1,0 +1,33 @@
+{
+  "name": "Ecole 241",
+  "author": "Dimitri ONGOUA",
+  "version": "1.0",
+  "description": "Une extension favorisant le partage et la communication entre les apprenants de l'Ecole 241 et leurs formateurs.",
+  "permissions": [
+    "storage",
+    "declarativeContent",
+    "notifications"
+  ],
+  "background": {
+    "scripts": ["assets/js/background.js"],
+    "persistent": false
+  },
+  "content_security_policy": "script-src 'self' https://*.firebaseio.com/; object-src 'self'",
+  "options_page": "assets/pg/config.html",
+  "page_action": {
+    "default_popup": "assets/pg/home.html",
+    "default_icon": {
+      "16": "assets/img/icone-16x16.png",
+      "32": "assets/img/icone-32x32.png",
+      "48": "assets/img/icone-48x48.png",
+      "128": "assets/img/icone-128x128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/img/icone-16x16.png",
+    "32": "assets/img/icone-32x32.png",
+    "48": "assets/img/icone-48x48.png",
+    "128": "assets/img/icone-128x128.png"
+  },
+  "manifest_version": 2
+}
