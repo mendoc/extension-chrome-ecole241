@@ -19,8 +19,6 @@ $(document).ready(function () {
         $('#publication .contenu').html(data.contenu);
         $('#publication').show();
         toggleLoad(false)
-
-        messageReceived("Nouvelle publication")
     });
 
     /* fonctions */
@@ -28,22 +26,5 @@ $(document).ready(function () {
     function toggleLoad(state) {
         if (state) $('.load').show()
         else $('.load').hide()
-    }
-
-    function getNotificationId() {
-        var id = Math.floor(Math.random() * 9007199254740992) + 1;
-        return id.toString();
-    }
-
-    function messageReceived(message) {
-        console.log("Message received: " + message);
-
-        // Pop up a notification to show the GCM message.
-        chrome.notifications.create(getNotificationId(), {
-            title: 'Ecole 241',
-            iconUrl: '../img/icone-48x48.png',
-            type: 'basic',
-            message: message
-        }, function() {});
     }
 });
