@@ -10,7 +10,7 @@
   ],
   "background": {
     "scripts": ["assets/js/firebase-app.js", "assets/js/firebase-database.js", "assets/js/background.js"],
-    "persistent": false
+    "persistent": true
   },
   "content_security_policy": "script-src 'self' https://*.firebaseio.com/; object-src 'self'",
   "options_page": "assets/pg/config.html",
