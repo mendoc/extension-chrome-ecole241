@@ -24,7 +24,8 @@ $(document).ready(function () {
     /* fonctions */
 
     function toggleLoad(state) {
-        if (state) $('.load').show()
-        else $('.load').hide()
+        if (state) $('.load').show();
+        else $('.load').hide();
+        chrome.browserAction.setBadgeText({text: "1"});
     }
 });
