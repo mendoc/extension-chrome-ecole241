@@ -1,4 +1,4 @@
-#extension-chrome-ecole241
+# extension-chrome-ecole241
 
 ## Description
 Une extension favorisant le partage et la communication entre les apprenants de l'Ecole 241 et leurs formateurs.
