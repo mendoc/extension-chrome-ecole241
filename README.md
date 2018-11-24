@@ -8,16 +8,26 @@ Une extension favorisant le partage et la communication entre les apprenants de 
 ### Cloner le dépôt
 Ouvrir le dossier de son choix, et dans le terminal, exécuter la commande suivante
 ```bash
-git clone https://github.com/mendoc/extension-chrome-ecole241.git
+git clone https://github.com/mendoc/extension-chrome-ecole241.git && exit
 ```
 Ceci créera un dossier **extension-chrome-ecole241**
 ### Installer l'extension
-* Accéder à la zone de gestion des **Extensions** de Google Chrome
+* Accéder à la zone de gestion des **Extensions** de Google Chrome. Ou saisir `chrome://extensions` dans la barre d'addresse
 * Cliquer sur le bouton de **Mode développeur**
-* Cliquer sur le bouton **Chargez l'extension non empaquetée** et choisir le dossier **extension-chrome-ecole241** 
+* Cliquer sur le bouton **Chargez l'extension non empaquetée** et choisir le dossier **extension-chrome-ecole241**. Une icône apparaît à côté de la barre d'adresse 
 * Fermer l'onglet de gestion des extensions.
 * Terminé.
 
+### Mettre à jour de l'extension
+* Lancer le terminal depuis le dossier **extension-chrome-ecole241**
+* Exécuter la commande suivante
+```bash
+git pull origin master && exit
+```
+* Accéder à la zone de gestion des **Extensions** de Google Chrome. Ou saisir `chrome://extensions` dans la barre d'addresse 
+* Cliquer sur l'icone de rechargement afin de réinstaller l'extension
+* Fermer l'onglet de gestion des extensions. 
+* Terminé.
 ## Domaine d'action
 L'extension n'est pas disponible lorsque l'internaute se trouve sur un onglet faisant référence à un fichier stocké en local.
 

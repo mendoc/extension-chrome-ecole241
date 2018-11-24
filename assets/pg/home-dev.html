@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecole 241</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet"/>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/now-ui-kit.min.css?v=1.2.0" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+<div id="main">
+    <div class="card mb-0" id="bloc_login" style="display: none;">
+        <div class="card-body px-0">
+            <!-- Tab panes -->
+            <div class="col-sm-6 col-lg-3 text-center">
+                <h2>ecole <span class="text-danger">{</span> 241 <span class="text-danger">}</span></h2>
+                <h4>Entrez votre jeton d'identification</h4>
+                <div class="form-group">
+                    <input type="text" id="input_jeton" placeholder="Jeton d'identification" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-danger" id="btn_jeton">Continuer</button>
+                </div>
+                <p class="text-danger none">Jeton d'identifiacation incorrect</p>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-0" id="bloc_main" style="display: none;">
+        <div class="card-header">
+            <ul class="nav nav-pills-danger nav-pills nav-pills-primary justify-content-center mt-4">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tab_pub" role="tab">Publication</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab_chat"
+                       role="tab">Discussion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab_work" role="tab">Travaux</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body px-0">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active px-3" id="tab_pub" role="tabpanel">
+                    <div class="load">
+                        <div class="image"></div>
+                        <div class="texte"><i>Chargement en cours <br>Veuillez patienter</i></div>
+                    </div>
+                    <section class="mt-5" id="publication">
+                        <h2 class="titre text-danger">Titre</h2>
+                        <p class="contenu"></p>
+                    </section>
+                </div>
+                <div class="tab-pane pl-3" id="tab_chat" role="tabpanel">
+                    <div class="load pr-3">
+                        <div class="image"></div>
+                        <div class="texte"><i>Chargement en cours <br>Veuillez patienter</i></div>
+                    </div>
+                    <section class="mt-1" id="discussion">
+                        <div class="messages mb-1 pr-3"></div>
+                        <div class="form-group mb-0 bloc-saisie pr-3">
+                            <input type="text" class="form-control" autocomplete="off" id="input_msg" placeholder="Appuyez sur la touche Entrée pour envoyer">
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane px-3" id="tab_work" role="tabpanel">
+                    <h2 class="text-center text-danger mt-5">Bientôt disponible</h2>
+                    <p class="text-justify">
+                        Cette rubrique recensera tous les travaux à faire (projets, veilles technologiques, etc.). Elle présentera l'énoncé du travail, l'approche, l'échéance ainsi que d'éventuelles informations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JQuery -->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/core/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- Firebase -->
+<script src="../js/firebase-app.js"></script>
+<script src="../js/firebase-database.js"></script>
+
+<!--App Script-->
+<script src="../js/home.js"></script>
+</body>
+</html>

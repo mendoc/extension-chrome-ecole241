@@ -35,9 +35,16 @@ chrome.runtime.onInstalled.addListener(function() {
         messageReceived("Ecole 241 - Nouvelle publication", data.titre)
     });
 
-    // Sauvegarde du paramètre couleur
-    chrome.storage.sync.set({color: '#3aa757'}, function() {
-        console.log("The color is green.");
+    chrome.contextMenus.removeAll();
+    chrome.contextMenus.create({
+        title: "Déconnexion",
+        contexts: ["page_action"],
+        id: "logout",
+        onclick: function() {
+            chrome.storage.sync.clear(function () {
+                console.log("Déconnexion...")
+            });
+        }
     });
 
     // Définition de quand l'extension devra être active

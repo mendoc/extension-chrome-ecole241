@@ -1,54 +1,81 @@
+html, body {
+    overflow: hidden;
+}
 body {
-    height: 400px;
-    width: 300px;
+    width: 400px;
+    max-height: 500px;
     background: #f2f1ed;
     font-family: 'Montserrat', sans-serif;
-    overflow-y: auto;
 }
-
+/*section, .card {display: none;}*/
 /* Style concernant le loading */
 .load {
     height: 100%;
     text-align: center;
 }
-.load .image{
-    position: absolute;
-    top: 40%;
-    left: 41%;
+
+.load .image {
     height: 48px;
+    margin: 21px auto;
     width: 48px;
-    background: #f2f0ed url(../img/load.gif) no-repeat center;
+    background: #ffffff url(../img/load.gif) no-repeat center;
     background-size: 48px;
-    z-index: -1;
 }
-.load .texte{
-    top: 56%;
-    left: 30%;
-    position: absolute;
-}
+
 /* Fin du tyle concernant le loading */
 
-section {
+#publication {
     display: none;
 }
-#publication .titre{
+
+#publication .titre {
     margin-bottom: 25px;
-    color: #e24342;
 }
-#publication .contenu{
+
+#publication .contenu {
     font-size: larger;
     line-height: 1.7em;
     max-height: 400px;
     overflow-y: auto;
 }
-table, tbody, tr{
+
+table, tbody, tr {
     display: block;
 }
-td{
+
+td {
     display: inline-block;
     width: 40%;
     padding: 10px;
 }
-td:first-child{
+
+td:first-child {
     font-weight: bold;
+}
+
+.msg{
+    max-width: 80%;
+    border-radius: 5px;
+}
+
+.msg-in {
+}
+
+.msg-out {
+    border: 1px #ff3636 solid;
+}
+
+.msg-parent {
+}
+
+.bloc-saisie {
+}
+
+.messages {
+    overflow: auto;
+    max-height: 255px;
+}
+.none{display: none;}
+#bloc_main {
+    /*display: none;*/
 }
