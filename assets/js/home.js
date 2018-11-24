@@ -34,7 +34,7 @@ $(document).ready(function () {
             let msg = $(this).val();
             if (msg.indexOf("#") !== -1) self = false;
             msg = msg.replace("#", "");
-            writeNewMsg("dimitri", msg, self, db);
+            writeNewMsg(msg, self);
         }
     });
 
@@ -89,24 +89,27 @@ $(document).ready(function () {
         });
     }
 
-    function writeNewMsg(user, texte, self, db) {
-        let branch = '/ecole241/discussion/' + user + '/' ;
-        let msg = {
-            message: texte,
-            self: (self) ? true : null
-        };
+    function writeNewMsg(texte, self) {
+        getUser(function (data) {
+            let branch = '/ecole241/discussion/' + data.user + '/' ;
+            let msg = {
+                message: texte,
+                self: (self) ? true : null
+            };
 
-        var newMsgKey = db.ref().child(branch).push().key;
+            var newMsgKey = db.ref().child(branch).push().key;
 
-        db.ref(branch + newMsgKey).set(msg, function(error) {
-            if (error) {
-                //$('.error-msg').show();
-                console.log("Erreur lors de l'envoi du message")
-            } else {
-                console.log("Message envoyé");
-                $('#input_msg').val("");
-            }
+            firebase.database().ref(branch + newMsgKey).set(msg, function(error) {
+                if (error) {
+                    //$('.error-msg').show();
+                    console.log("Erreur lors de l'envoi du message")
+                } else {
+                    console.log("Message envoyé");
+                    $('#input_msg').val("");
+                }
+            });
         });
+
     }
 
     function saveToken(token) {
