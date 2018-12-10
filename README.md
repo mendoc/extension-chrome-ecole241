@@ -28,6 +28,7 @@ git pull origin master && exit
 * Cliquer sur l'icone de rechargement afin de réinstaller l'extension
 * Fermer l'onglet de gestion des extensions. 
 * Terminé.
+
 ## Domaine d'action
 L'extension n'est pas disponible lorsque l'internaute se trouve sur un onglet faisant référence à un fichier stocké en local.
 
