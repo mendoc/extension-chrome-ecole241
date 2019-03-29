@@ -18,7 +18,7 @@ Ceci créera un dossier **extension-chrome-ecole241**
 * Fermer l'onglet de gestion des extensions.
 * Terminé.
 
-### Mettre à jour de l'extension
+## Mettre à jour de l'extension
 * Lancer le terminal depuis le dossier **extension-chrome-ecole241**
 * Exécuter la commande suivante
 ```bash
